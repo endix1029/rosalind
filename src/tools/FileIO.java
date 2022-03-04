@@ -24,16 +24,16 @@ public class FileIO {
 	}
 	
 	public FileIO(String prob) throws IOException {
-		reader = new BufferedReader(new FileReader("/Users/wook/Documents/eclipse-workspace/Rosalind/lib/~ba/rosalind_" + prob + ".txt"));
-		writer = new PrintWriter("/Users/wook/Documents/eclipse-workspace/Rosalind/out/~ba/result_" + prob + ".txt");
+		reader = new BufferedReader(new FileReader("lib/~ba/rosalind_" + prob + ".txt"));
+		writer = new PrintWriter("out/~ba/result_" + prob + ".txt");
 		iostyle = 'f';
 	}
 	
 	// exclusively for ROSALIND textbook track source files
 	public FileIO(int chap, char prob) throws IOException {
-		reader = new BufferedReader(new FileReader("/Users/wook/Documents/eclipse-workspace/Rosalind/lib/ba/ch" 
+		reader = new BufferedReader(new FileReader("lib/ba/ch" 
 				+ String.valueOf(chap) + "/rosalind_BA" + String.valueOf(chap) + prob + ".txt"));
-		writer = new PrintWriter("/Users/wook/Documents/eclipse-workspace/Rosalind/out/ba/ch" 
+		writer = new PrintWriter("out/ba/ch" 
 				+ String.valueOf(chap) + "/result_ba" + String.valueOf(chap) + prob + ".txt");
 		iostyle = 't';
 	}
